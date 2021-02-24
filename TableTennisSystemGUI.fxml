@@ -39,7 +39,7 @@
                         </AnchorPane>
                         <AnchorPane layoutX="14.0" layoutY="221.0" prefHeight="102.0" prefWidth="433.0" style="-fx-background-color: silver;">
                            <children>
-                              <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This will generate aa match between all teams." />
+                              <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This will generate a match between all teams." />
                               <Text layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warning: all pre-existing match information will be removed." />
                               <Button fx:id="generateFixturesButton" layoutX="310.0" layoutY="63.0" mnemonicParsing="false" onAction="#generateFixtures" text="Generate Fixtures" />
                            </children>
