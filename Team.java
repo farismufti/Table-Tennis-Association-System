@@ -4,9 +4,11 @@ import java.util.ArrayList;
 public class Team {
 
     private String teamName;
-    private int setsWon;
     private boolean isHomeTeam;
     private ArrayList<Player> playersList;
+    private int matchesPlayed;
+    private int matchesWon;
+    private int setsWon;
 
     public Team() {}
 
