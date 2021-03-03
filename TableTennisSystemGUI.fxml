@@ -92,21 +92,21 @@
                         <ChoiceBox layoutX="14.0" layoutY="246.0" prefHeight="67.0" prefWidth="172.0" />
                         <ChoiceBox layoutX="205.0" layoutY="102.0" prefHeight="62.0" prefWidth="172.0" />
                         <ChoiceBox layoutX="384.0" layoutY="102.0" prefHeight="62.0" prefWidth="172.0" />
-                        <TextField layoutX="206.0" layoutY="171.0" prefHeight="25.0" prefWidth="173.0" />
-                        <TextField layoutX="206.0" layoutY="196.0" prefHeight="13.0" prefWidth="173.0" />
-                        <TextField layoutX="206.0" layoutY="221.0" prefHeight="13.0" prefWidth="173.0" />
-                        <TextField layoutX="206.0" layoutY="255.0" prefHeight="25.0" prefWidth="173.0" />
-                        <TextField layoutX="205.0" layoutY="280.0" prefHeight="25.0" prefWidth="175.0" />
-                        <TextField layoutX="205.0" layoutY="305.0" prefHeight="25.0" prefWidth="175.0" />
-                        <TextField layoutX="384.0" layoutY="171.0" prefHeight="25.0" prefWidth="173.0" />
-                        <TextField layoutX="384.0" layoutY="196.0" prefHeight="13.0" prefWidth="173.0" />
-                        <TextField layoutX="384.0" layoutY="221.0" prefHeight="13.0" prefWidth="173.0" />
-                        <TextField layoutX="385.0" layoutY="255.0" prefHeight="25.0" prefWidth="172.0" />
-                        <TextField layoutX="385.0" layoutY="280.0" prefHeight="25.0" prefWidth="172.0" />
-                        <TextField layoutX="385.0" layoutY="305.0" prefHeight="25.0" prefWidth="173.0" />
-                        <TextField layoutX="205.0" layoutY="337.0" prefHeight="25.0" prefWidth="175.0" />
-                        <TextField layoutX="205.0" layoutY="362.0" prefHeight="25.0" prefWidth="175.0" />
-                        <TextField layoutX="205.0" layoutY="387.0" prefHeight="25.0" prefWidth="175.0" />
+                        <TextField fx:id="set1Game1" layoutX="206.0" layoutY="171.0" prefHeight="25.0" prefWidth="173.0" />
+                        <TextField fx:id="set1Game2" layoutX="206.0" layoutY="196.0" prefHeight="13.0" prefWidth="173.0" />
+                        <TextField fx:id="set1Game3" layoutX="206.0" layoutY="221.0" prefHeight="13.0" prefWidth="173.0" />
+                        <TextField fx:id="set3Game1" layoutX="206.0" layoutY="255.0" prefHeight="25.0" prefWidth="173.0" />
+                        <TextField fx:id="set3Game2" layoutX="205.0" layoutY="280.0" prefHeight="25.0" prefWidth="175.0" />
+                        <TextField fx:id="set3Game3" layoutX="205.0" layoutY="305.0" prefHeight="25.0" prefWidth="175.0" />
+                        <TextField fx:id="set2Game1" layoutX="384.0" layoutY="171.0" prefHeight="25.0" prefWidth="173.0" />
+                        <TextField fx:id="set2Game2" layoutX="384.0" layoutY="196.0" prefHeight="13.0" prefWidth="173.0" />
+                        <TextField fx:id="set2Game3" layoutX="384.0" layoutY="221.0" prefHeight="13.0" prefWidth="173.0" />
+                        <TextField fx:id="set4Game1" layoutX="385.0" layoutY="255.0" prefHeight="25.0" prefWidth="172.0" />
+                        <TextField fx:id="set4Game2" layoutX="385.0" layoutY="280.0" prefHeight="25.0" prefWidth="172.0" />
+                        <TextField fx:id="set4Game3" layoutX="385.0" layoutY="305.0" prefHeight="25.0" prefWidth="173.0" />
+                        <TextField fx:id="doubleSetGame1" layoutX="205.0" layoutY="337.0" prefHeight="25.0" prefWidth="175.0" />
+                        <TextField fx:id="doubleSetGame2" layoutX="205.0" layoutY="362.0" prefHeight="25.0" prefWidth="175.0" />
+                        <TextField fx:id="doubleSetGame3" layoutX="205.0" layoutY="387.0" prefHeight="25.0" prefWidth="175.0" />
                         <Text layoutX="77.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Single Sets">
                            <font>
                               <Font name="System Bold" size="14.0" />
@@ -117,7 +117,7 @@
                               <Font name="System Bold" size="14.0" />
                            </font>
                         </Text>
-                        <TextArea layoutX="384.0" layoutY="337.0" prefHeight="74.0" prefWidth="176.0" />
+                        <TextArea fx:id="finalScoreTextField" layoutX="384.0" layoutY="337.0" prefHeight="74.0" prefWidth="176.0" />
                         <Text layoutX="576.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Final Score">
                            <font>
                               <Font name="System Bold" size="14.0" />
