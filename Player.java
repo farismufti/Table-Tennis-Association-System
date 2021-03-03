@@ -7,10 +7,10 @@ public class Player {
 
     public Player() {}
 
-    public Player(String name, String team) {
+    public Player(String name) {
 
         this.name = name;
-        this.team = team;
+        String teamName = team;
     }
 
     public void setName(String name) {
