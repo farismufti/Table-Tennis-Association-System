@@ -102,22 +102,23 @@ public class Controller {
 
             teamNameInput = teamNameTextField.getText();
             if(teamNameInput.equals("")) throw new InputMismatchException();
+
+            Team t = new Team(teamNameInput);
+            AdminPage.teamsList.add(t);
+
+            ObservableList<Object> allTeams = FXCollections.observableArrayList();
+            //Populating the teams choice box with teams.
+            for(Team team : AdminPage.teamsList) {
+
+                allTeams.add(team.getTeamName());
+            }
+            teamNameChoiceBox.setItems(allTeams);
         }
+
         catch(InputMismatchException e) {
 
-            System.err.println("No input added, please enter a team name.");
+            System.err.println("Error: No input added, please enter a team name.");
         }
-        
-        Team t = new Team(teamNameInput);
-        AdminPage.teamsList.add(t);
-
-        ObservableList<Object> allTeams = FXCollections.observableArrayList();
-        //Populating the teams choice box with teams.
-        for(Team team : AdminPage.teamsList) {
-
-            allTeams.add(team.getTeamName());
-        }
-        teamNameChoiceBox.setItems(allTeams);
 
         //For testing purposes
         for(int i = 0; i < AdminPage.teamsList.size(); i++) {  //For testing purposes
@@ -125,6 +126,12 @@ public class Controller {
             System.out.println("Items in teamsList: " + AdminPage.teamsList.get(i).getTeamName());
         }
 
+    }
+
+    @FXML
+    void registerPlayer(ActionEvent event) {
+
+        
     }
 
     @FXML
@@ -149,11 +156,6 @@ public class Controller {
 
     @FXML
     void newSheet(ActionEvent event) {
-
-    }
-
-    @FXML
-    void registerPlayer(ActionEvent event) {
 
     }
 
