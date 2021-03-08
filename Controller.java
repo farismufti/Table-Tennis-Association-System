@@ -177,16 +177,150 @@ public class Controller {
     @FXML
     void calculateAndSubmitScores(ActionEvent event) {
 
-        Game game1 = new Game();
-        Game game2 = new Game();
-        Game game4 = new Game();
+        int homeTeamTotalScore = 0;
+        int awayTeamTotalScore = 0;
+        CharSequence scores = null; //Used to store text field inputs to process string and calculate scores.
+        int homeScore = 0;
+        int awayScore = 0;
 
-        Set singleSet1 = new Set();
-        Set singleSet2 = new Set();
-        Set singleSet3 = new Set();
-        Set singleSet4 = new Set();
-        DoubleSet doubleSet = new DoubleSet();
+        //48 seems to be added to the scores, a -48 is added to counteract that.
+        scores = set1Game1.getCharacters();
+        homeScore = scores.charAt(0) - 48;
+        awayScore = scores.charAt(2) - 48;
+        homeTeamTotalScore += homeScore;
+        awayTeamTotalScore += awayScore;
+        homeScore = 0;
+        awayScore = 0;
+        scores = null;
 
+        scores = set1Game2.getCharacters();
+        homeScore = scores.charAt(0) - 48;
+        awayScore = scores.charAt(2) - 48;
+        homeTeamTotalScore += homeScore;
+        awayTeamTotalScore += awayScore;
+        homeScore = 0;
+        awayScore = 0;
+        scores = null;
+
+        scores = set1Game3.getCharacters();
+        homeScore = scores.charAt(0) - 48;
+        awayScore = scores.charAt(2) - 48;
+        homeTeamTotalScore += homeScore;
+        awayTeamTotalScore += awayScore;
+        homeScore = 0;
+        awayScore = 0;
+        scores = null;
+
+        scores = set2Game1.getCharacters();
+        homeScore = scores.charAt(0) - 48;
+        awayScore = scores.charAt(2) - 48;
+        homeTeamTotalScore += homeScore;
+        awayTeamTotalScore += awayScore;
+        homeScore = 0;
+        awayScore = 0;
+        scores = null;
+
+        scores = set2Game2.getCharacters();
+        homeScore = scores.charAt(0) - 48;
+        awayScore = scores.charAt(2) - 48;
+        homeTeamTotalScore += homeScore;
+        awayTeamTotalScore += awayScore;
+        homeScore = 0;
+        awayScore = 0;
+        scores = null;
+
+        scores = set2Game3.getCharacters();
+        homeScore = scores.charAt(0) - 48;
+        awayScore = scores.charAt(2) - 48;
+        homeTeamTotalScore += homeScore;
+        awayTeamTotalScore += awayScore;
+        homeScore = 0;
+        awayScore = 0;
+        scores = null;
+
+        scores = set3Game1.getCharacters();
+        homeScore = scores.charAt(0) - 48;
+        awayScore = scores.charAt(2) - 48;
+        homeTeamTotalScore += homeScore;
+        awayTeamTotalScore += awayScore;
+        homeScore = 0;
+        awayScore = 0;
+        scores = null;
+
+        scores = set3Game2.getCharacters();
+        homeScore = scores.charAt(0) - 48;
+        awayScore = scores.charAt(2) - 48;
+        homeTeamTotalScore += homeScore;
+        awayTeamTotalScore += awayScore;
+        homeScore = 0;
+        awayScore = 0;
+        scores = null;
+
+        scores = set3Game3.getCharacters();
+        homeScore = scores.charAt(0) - 48;
+        awayScore = scores.charAt(2) - 48;
+        homeTeamTotalScore += homeScore;
+        awayTeamTotalScore += awayScore;
+        homeScore = 0;
+        awayScore = 0;
+        scores = null;
+
+        scores = set4Game1.getCharacters();
+        homeScore = scores.charAt(0) - 48;
+        awayScore = scores.charAt(2) - 48;
+        homeTeamTotalScore += homeScore;
+        awayTeamTotalScore += awayScore;
+        homeScore = 0;
+        awayScore = 0;
+        scores = null;
+
+        scores = set4Game2.getCharacters();
+        homeScore = scores.charAt(0) - 48;
+        awayScore = scores.charAt(2) - 48;
+        homeTeamTotalScore += homeScore;
+        awayTeamTotalScore += awayScore;
+        homeScore = 0;
+        awayScore = 0;
+        scores = null;
+
+        scores = set4Game3.getCharacters();
+        homeScore = scores.charAt(0) - 48;
+        awayScore = scores.charAt(2) - 48;
+        homeTeamTotalScore += homeScore;
+        awayTeamTotalScore += awayScore;
+        homeScore = 0;
+        awayScore = 0;
+        scores = null;
+
+        scores = doubleSetGame1.getCharacters();
+        homeScore = scores.charAt(0) - 48;
+        awayScore = scores.charAt(2) - 48;
+        homeTeamTotalScore += homeScore;
+        awayTeamTotalScore += awayScore;
+        homeScore = 0;
+        awayScore = 0;
+        scores = null;
+
+        scores = doubleSetGame2.getCharacters();
+        homeScore = scores.charAt(0) - 48;
+        awayScore = scores.charAt(2) - 48;
+        homeTeamTotalScore += homeScore;
+        awayTeamTotalScore += awayScore;
+        homeScore = 0;
+        awayScore = 0;
+        scores = null;
+
+        scores = doubleSetGame3.getCharacters();
+        homeScore = scores.charAt(0) - 48;
+        awayScore = scores.charAt(2) - 48;
+        homeTeamTotalScore += homeScore;
+        awayTeamTotalScore += awayScore;
+        homeScore = 0;
+        awayScore = 0;
+        scores = null;
+
+        finalScoreTextField.setText(homeTeamTotalScore + ":" + awayTeamTotalScore);
+        finalScoreTextField.setDisable(true);
 
     }
 
