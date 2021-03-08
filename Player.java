@@ -7,10 +7,10 @@ public class Player {
 
     public Player() {}
 
-    public Player(String name) {
+    public Player(String name, String team) {
 
         this.name = name;
-        String teamName = team;
+        this.team= team;
     }
 
     public void setName(String name) {
@@ -23,19 +23,19 @@ public class Player {
         this.team = team;
     }
 
-    public String getName() {
+    public String getPlayerName() {
 
         return name;
     }
 
-    public String getTeam() {
+    public String getTeamName() {
 
         return team;
     }
 
     public String toString() {
 
-        return "Player Name: " + getName() + ", Team: " + getTeam();
+        return "Player Name: " + getPlayerName() + ", Team: " + getTeamName();
     }
 
 }
