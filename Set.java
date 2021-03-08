@@ -2,52 +2,63 @@ package sample;
 
 public class Set {
 
-    private int firstGameScore;
-    private int secondGameScore;
-    private int thirdGameScore;
+    private String homePlayer;
+    private String awayPlayer;
+    private int homePlayerScore;
+    private int awayPlayerScore;
 
     public Set() {}
+    
+    public Set(String homePlayer, String awayPlayer, int homePlayerScore, int awayPlayerScore) {
 
-    //Not sure what format the score will be in (int : int)
-    public Set(int firstGameScore, int secondGameScore, int thirdGameScore) {
-
-        this.firstGameScore = firstGameScore;
-        this.secondGameScore = secondGameScore;
-        this.thirdGameScore = thirdGameScore;
+        this.homePlayer = homePlayer;
+        this.awayPlayer = awayPlayer;
+        this.homePlayerScore = homePlayerScore;
+        this.awayPlayerScore = awayPlayerScore;
     }
 
-    public void setFirstGameScore(int score) {
+    public void setHomePlayer(String homePlayer) {
 
-        firstGameScore = score;
+        this.homePlayer = homePlayer;
     }
 
-    public void setSecondGameScore(int score) {
+    public void setAwayPlayer(String awayPlayer) {
 
-        secondGameScore = score;
+        this.awayPlayer = awayPlayer;
     }
 
-    public void setThirdGameScore(int score) {
+    public void setHomePlayerScore(int score) {
 
-        thirdGameScore = score;
+        this.homePlayerScore = score;
     }
 
-    public int getFirstGameScore() {
+    public void setAwayPlayerScore(int score) {
 
-        return firstGameScore;
+        this.awayPlayerScore = score;
     }
 
-    public int getSecondGameScore() {
+    public String getHomePlayer() {
 
-        return secondGameScore;
+        return homePlayer;
     }
 
-    public int getThirdGameScore() {
+    public String getAwayPlayer() {
 
-        return thirdGameScore;
+        return awayPlayer;
+    }
+
+    public int getHomePlayerScore() {
+
+        return homePlayerScore;
+    }
+
+    public int getAwayPlayerScore() {
+
+        return awayPlayerScore;
     }
 
     public String toString() {
 
-        return "";  //Not sure how to represent this.
+        return homePlayer + " vs " + awayPlayer + " = ";  //TBC
     }
 }
