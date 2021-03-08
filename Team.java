@@ -4,20 +4,18 @@ import java.util.ArrayList;
 public class Team {
 
     private String teamName;
-    private boolean isHomeTeam;
-    private ArrayList<Player> playersList;
+    protected static ArrayList<Player> playersList;
     private int matchesPlayed;
     private int matchesWon;
     private int setsWon;
 
     public Team() {}
 
-    public Team(String teamName, int setsWon, boolean isHomeTeam, ArrayList<Player> playersList) {
+    public Team(String teamName) {
 
         this.teamName = teamName;
-        this.setsWon = setsWon;
-        this.isHomeTeam = isHomeTeam;
-        this.playersList = playersList;
+        setsWon = 0;
+        playersList = new ArrayList<Player>();
     }
 
     public void setTeamName(String name) {
@@ -35,13 +33,18 @@ public class Team {
         return setsWon;
     }
 
-    public boolean isHomeTeam() {
-
-        return isHomeTeam;
-    }
-
     public ArrayList<Player> getPlayersList() {
 
         return playersList;
+    }
+
+    public int getMatchesWon() {
+
+        return matchesWon;
+    }
+
+    public int getMatchesPlayed() {
+
+        return matchesPlayed;
     }
 }
