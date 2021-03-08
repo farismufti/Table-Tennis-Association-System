@@ -34,7 +34,7 @@
                               <TextField fx:id="playerNameTextField" layoutX="193.0" layoutY="18.0" prefHeight="25.0" prefWidth="95.0" />
                               <Button fx:id="registerPlayerButton" layoutX="307.0" layoutY="60.0" mnemonicParsing="false" onAction="#registerPlayer" text="Register Player" />
                               <ChoiceBox fx:id="teamNameChoiceBox" layoutX="290.0" layoutY="18.0" prefHeight="25.0" prefWidth="130.0" />
-                              <Label layoutX="298.0" layoutY="22.0" text="Select a team name" />
+                              <Label layoutX="303.0" text="Select a team name:" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="14.0" layoutY="221.0" prefHeight="102.0" prefWidth="433.0" style="-fx-background-color: silver;">
