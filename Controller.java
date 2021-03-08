@@ -138,7 +138,7 @@ public class Controller {
         try {
 
             playerNameInput = playerNameTextField.getText();
-            if(playerNameInput.equals("")) throw new InputMismatchException();
+            if(playerNameInput.equals("") || teamNameChoiceBox.getValue() == null) throw new InputMismatchException();
 
             Player p = new Player(playerNameInput, (String)teamNameChoiceBox.getValue());
             Team.playersList.add(p);
@@ -146,7 +146,7 @@ public class Controller {
 
         catch(InputMismatchException e) {
 
-            System.err.println("Error: No input added, please enter a player name.");
+            System.err.println("Error: Please enter a player name and choose a team.");
         }
 
         playerNameTextField.setText(null);
