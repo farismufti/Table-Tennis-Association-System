@@ -120,6 +120,8 @@ public class Controller {
             System.err.println("Error: No input added, please enter a team name.");
         }
 
+        teamNameTextField.setText(null);
+
         //For testing purposes
         for(int i = 0; i < AdminPage.teamsList.size(); i++) {  //For testing purposes
 
@@ -131,7 +133,30 @@ public class Controller {
     @FXML
     void registerPlayer(ActionEvent event) {
 
-        
+        String playerNameInput = null;
+
+        try {
+
+            playerNameInput = playerNameTextField.getText();
+            if(playerNameInput.equals("")) throw new InputMismatchException();
+
+            Player p = new Player(playerNameInput, (String)teamNameChoiceBox.getValue());
+            Team.playersList.add(p);
+        }
+
+        catch(InputMismatchException e) {
+
+            System.err.println("Error: No input added, please enter a player name.");
+        }
+
+        playerNameTextField.setText(null);
+
+        //For testing purposes
+        for(int i = 0; i < Team.playersList.size(); i++) {
+
+            System.out.println("Player -> " + Team.playersList.get(i).getPlayerName()
+                    + ", Registered to team -> " + Team.playersList.get(i).getTeamName());
+        }
     }
 
     @FXML
