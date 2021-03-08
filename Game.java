@@ -2,40 +2,64 @@ package sample;
 
 public class Game {
 
-    private int homeScore;
-    private int awayScore;
+    private int homeTeamScore;
+    private int awayTeamScore;
+    private String homeTeam;
+    private String awayTeam;
 
     public Game() {}
 
     public Game(int homeScore, int awayScore) {
 
-        this.homeScore = homeScore;
-        this.awayScore = awayScore;
+        this.homeTeamScore = homeScore;
+        this.awayTeamScore = awayScore;
+        String homeTeamName = homeTeam;
+        String awayTeamName = awayTeam;
     }
 
     //Not sure if 'String team' should also be an argument for the set functions.
     public void setHomeScore(int score) {
 
-        homeScore = score;
+        homeTeamScore = score;
     }
 
     public void setAwayScore(int score) {
 
-        awayScore = score;
+        awayTeamScore = score;
     }
 
-    public int getHomeScore() {
+    public void setHomeTeam(String homeTeam) {
 
-        return homeScore;
+        this.homeTeam = homeTeam;
     }
 
-    public int getAwayScore() {
+    public void setAwayTeam(String awayTeam) {
 
-        return awayScore;
+        this.awayTeam = awayTeam;
+    }
+
+    public int getHomeTeamScore() {
+
+        return homeTeamScore;
+    }
+
+    public int getAwayTeamScore() {
+
+        return awayTeamScore;
+    }
+
+    public String getHomeTeam() {
+
+        return homeTeam;
+    }
+
+    public String getAwayTeam() {
+
+        return awayTeam;
     }
 
     public String toString() {
 
-        return "Home Team Score: " + getHomeScore() + ", Away Team Score: " + getAwayScore();
+        return homeTeamScore + ":" + awayTeamScore;
     }
 }
