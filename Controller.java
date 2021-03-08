@@ -51,13 +51,13 @@ public class Controller {
     @FXML
     private ChoiceBox<Object> awayTeamChoiceBox;
     @FXML
-    private ChoiceBox<?> homePlayer1ChoiceBox;
+    private ChoiceBox<Object> homePlayer1ChoiceBox;
     @FXML
-    private ChoiceBox<?> homePlayer2ChoiceBox;
+    private ChoiceBox<Object> homePlayer2ChoiceBox;
     @FXML
-    private ChoiceBox<?> awayPlayer1ChoiceBox;
+    private ChoiceBox<Object> awayPlayer1ChoiceBox;
     @FXML
-    private ChoiceBox<?> awayPlayer2ChoiceBox;
+    private ChoiceBox<Object> awayPlayer2ChoiceBox;
     @FXML
     private TextField set1Game1;
     @FXML
@@ -107,11 +107,12 @@ public class Controller {
             AdminPage.teamsList.add(t);
 
             ObservableList<Object> allTeams = FXCollections.observableArrayList();
-            //Populating the teams choice box with teams.
             for(Team team : AdminPage.teamsList) {
 
                 allTeams.add(team.getTeamName());
             }
+
+            //Populating the teams choice box with teams.
             teamNameChoiceBox.setItems(allTeams);
             homeTeamChoiceBox.setItems(allTeams);  //Score sheet page
             awayTeamChoiceBox.setItems(allTeams);  //Score sheet page
@@ -144,6 +145,18 @@ public class Controller {
 
             Player p = new Player(playerNameInput, (String)teamNameChoiceBox.getValue());
             Team.playersList.add(p);
+
+            ObservableList<Object> allPlayers = FXCollections.observableArrayList();
+            for(Player player : Team.playersList) {
+
+                allPlayers.add(player.getPlayerName());
+            }
+
+            //Populating the player choice boxes in score sheet with players
+            homePlayer1ChoiceBox.setItems(allPlayers);
+            homePlayer2ChoiceBox.setItems(allPlayers);
+            awayPlayer1ChoiceBox.setItems(allPlayers);
+            awayPlayer2ChoiceBox.setItems(allPlayers);
         }
 
         catch(InputMismatchException e) {
