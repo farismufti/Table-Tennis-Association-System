@@ -33,8 +33,8 @@
                               <Text layoutX="7.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter the name of the new player:" />
                               <TextField fx:id="playerNameTextField" layoutX="193.0" layoutY="18.0" prefHeight="25.0" prefWidth="95.0" />
                               <Button fx:id="registerPlayerButton" layoutX="307.0" layoutY="60.0" mnemonicParsing="false" onAction="#registerPlayer" text="Register Player" />
-                              <ChoiceBox layoutX="290.0" layoutY="18.0" prefHeight="25.0" prefWidth="130.0" />
-                              <Label fx:id="teamChoiceBox" layoutX="298.0" layoutY="22.0" text="Select a team name" />
+                              <ChoiceBox fx:id="teamNameChoiceBox" layoutX="290.0" layoutY="18.0" prefHeight="25.0" prefWidth="130.0" />
+                              <Label layoutX="298.0" layoutY="22.0" text="Select a team name" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="14.0" layoutY="221.0" prefHeight="102.0" prefWidth="433.0" style="-fx-background-color: silver;">
@@ -86,12 +86,12 @@
                         <Button fx:id="modifySheetButton" layoutX="138.0" layoutY="14.0" mnemonicParsing="false" onAction="#modifySheet" prefHeight="25.0" prefWidth="94.0" text="Modify Sheet" />
                         <Text layoutX="171.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home Team:" />
                         <Text layoutX="427.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Away Team:" />
-                        <ChoiceBox layoutX="245.0" layoutY="56.0" prefWidth="150.0" />
-                        <ChoiceBox layoutX="499.0" layoutY="56.0" prefWidth="150.0" />
-                        <ChoiceBox layoutX="14.0" layoutY="171.0" prefHeight="62.0" prefWidth="172.0" />
-                        <ChoiceBox layoutX="14.0" layoutY="246.0" prefHeight="67.0" prefWidth="172.0" />
-                        <ChoiceBox layoutX="205.0" layoutY="102.0" prefHeight="62.0" prefWidth="172.0" />
-                        <ChoiceBox layoutX="384.0" layoutY="102.0" prefHeight="62.0" prefWidth="172.0" />
+                        <ChoiceBox fx:id="homeTeamChoiceBox" layoutX="245.0" layoutY="56.0" prefWidth="150.0" />
+                        <ChoiceBox fx:id="awayTeamChoiceBox" layoutX="499.0" layoutY="56.0" prefWidth="150.0" />
+                        <ChoiceBox fx:id="homePlayer1ChoiceBox" layoutX="14.0" layoutY="171.0" prefHeight="62.0" prefWidth="172.0" />
+                        <ChoiceBox fx:id="homePlayer2ChoiceBox" layoutX="14.0" layoutY="246.0" prefHeight="67.0" prefWidth="172.0" />
+                        <ChoiceBox fx:id="awayPlayer1ChoiceBox" layoutX="205.0" layoutY="102.0" prefHeight="62.0" prefWidth="172.0" />
+                        <ChoiceBox fx:id="awayPlayer2ChoiceBox" layoutX="384.0" layoutY="102.0" prefHeight="62.0" prefWidth="172.0" />
                         <TextField fx:id="set1Game1" layoutX="206.0" layoutY="171.0" prefHeight="25.0" prefWidth="173.0" />
                         <TextField fx:id="set1Game2" layoutX="206.0" layoutY="196.0" prefHeight="13.0" prefWidth="173.0" />
                         <TextField fx:id="set1Game3" layoutX="206.0" layoutY="221.0" prefHeight="13.0" prefWidth="173.0" />
