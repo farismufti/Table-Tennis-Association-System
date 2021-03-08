@@ -47,9 +47,9 @@ public class Controller {
     @FXML
     private Button modifySheetButton;
     @FXML
-    private ChoiceBox<?> homeTeamChoiceBox;
+    private ChoiceBox<Object> homeTeamChoiceBox;
     @FXML
-    private ChoiceBox<?> awayTeamChoiceBox;
+    private ChoiceBox<Object> awayTeamChoiceBox;
     @FXML
     private ChoiceBox<?> homePlayer1ChoiceBox;
     @FXML
@@ -113,6 +113,8 @@ public class Controller {
                 allTeams.add(team.getTeamName());
             }
             teamNameChoiceBox.setItems(allTeams);
+            homeTeamChoiceBox.setItems(allTeams);  //Score sheet page
+            awayTeamChoiceBox.setItems(allTeams);  //Score sheet page
         }
 
         catch(InputMismatchException e) {
@@ -161,6 +163,17 @@ public class Controller {
 
     @FXML
     void calculateAndSubmitScores(ActionEvent event) {
+
+        Game game1 = new Game();
+        Game game2 = new Game();
+        Game game4 = new Game();
+
+        Set singleSet1 = new Set();
+        Set singleSet2 = new Set();
+        Set singleSet3 = new Set();
+        Set singleSet4 = new Set();
+        DoubleSet doubleSet = new DoubleSet();
+
 
     }
 
