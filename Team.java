@@ -14,6 +14,8 @@ public class Team {
     public Team(String teamName) {
 
         this.teamName = teamName;
+        matchesPlayed = 0;
+        matchesWon = 0;
         setsWon = 0;
         playersList = new ArrayList<Player>();
     }
