@@ -292,6 +292,22 @@ public class Controller {
     @FXML
     void newSheet(ActionEvent event) {
 
+        set1Game1.clear();
+        set1Game2.clear();
+        set1Game3.clear();
+        set2Game1.clear();
+        set2Game2.clear();
+        set2Game3.clear();
+        set3Game1.clear();
+        set3Game2.clear();
+        set3Game3.clear();
+        set4Game1.clear();
+        set4Game2.clear();
+        set4Game3.clear();
+        doubleSetGame1.clear();
+        doubleSetGame2.clear();
+        doubleSetGame3.clear();
+        finalScoreTextField.clear();
     }
 
     @FXML
