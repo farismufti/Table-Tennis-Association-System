@@ -3,6 +3,7 @@ package sample;
 import java.net.URL;
 import java.util.InputMismatchException;
 import java.util.ResourceBundle;
+import java.util.stream.Stream;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -177,10 +178,12 @@ public class Controller {
     private int homeTeamTotalScore = 0;
     private int awayTeamTotalScore = 0;
 
-    private void calculateScores(CharSequence scores) {
+    private void calculateScores(String scores) {
 
-        int homeScore = scores.charAt(0) - 48;
-        int awayScore = scores.charAt(2) - 48;
+        //48 seems to be added to the scores, a -48 is added to counteract that.
+        int[] arr = Stream.of(scores.split(":")).mapToInt(Integer::parseInt).toArray();
+        int homeScore = arr[0];
+        int awayScore = arr[1];
         homeTeamTotalScore += homeScore;
         awayTeamTotalScore += awayScore;
         homeScore = 0;
@@ -191,7 +194,7 @@ public class Controller {
     void calculateAndSubmitScores(ActionEvent event) {
 
 
-        CharSequence scores = null; //Used to store text field inputs to process string and calculate scores.
+        String scores = null; //Used to store text field inputs to process string and calculate scores.
         int homeScore = 0;
         int awayScore = 0;
 
@@ -205,65 +208,64 @@ public class Controller {
         DoubleSet doubleSet;
         Match match;
 
-        //48 seems to be added to the scores, a -48 is added to counteract that.
-        scores = set1Game1.getCharacters();
+        scores = set1Game1.getText();
+        calculateScores((String) scores);
+        scores = null;
+
+        scores = set1Game2.getText();
         calculateScores(scores);
         scores = null;
 
-        scores = set1Game2.getCharacters();
-        calculateScores(scores);
-        scores = null;
-
-        scores = set1Game3.getCharacters();
+        scores = set1Game3.getText();
         calculateScores(scores);
         scores = null;
 
 
-        scores = set2Game1.getCharacters();
+        scores = set2Game1.getText();
         calculateScores(scores);
         scores = null;
 
-        scores = set2Game2.getCharacters();
+        scores = set2Game2.getText();
         calculateScores(scores);
         scores = null;
 
-        scores = set2Game3.getCharacters();
+        scores = set2Game3.getText();
         calculateScores(scores);
         scores = null;
 
-        scores = set3Game1.getCharacters();
+        scores = set3Game1.getText();
         calculateScores(scores);
         scores = null;
 
-        scores = set3Game2.getCharacters();
+        scores = set3Game2.getText();
         calculateScores(scores);
         scores = null;
 
-        scores = set3Game3.getCharacters();
+        scores = set3Game3.getText();
         calculateScores(scores);
         scores = null;
 
-        scores = set4Game1.getCharacters();
+        scores = set4Game1.getText();
         calculateScores(scores);
         scores = null;
 
-        scores = set4Game2.getCharacters();
+        scores = set4Game2.getText();
         calculateScores(scores);
         scores = null;
 
-        scores = set4Game3.getCharacters();
+        scores = set4Game3.getText();
         calculateScores(scores);
         scores = null;
 
-        scores = doubleSetGame1.getCharacters();
+        scores = doubleSetGame1.getText();
         calculateScores(scores);
         scores = null;
 
-        scores = doubleSetGame2.getCharacters();
+        scores = doubleSetGame2.getText();
         calculateScores(scores);
         scores = null;
 
-        scores = doubleSetGame3.getCharacters();
+        scores = doubleSetGame3.getText();
         calculateScores(scores);
         scores = null;
 
