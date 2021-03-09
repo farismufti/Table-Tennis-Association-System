@@ -67,7 +67,7 @@
                               <Button fx:id="viewMatchScoresButton" layoutX="19.0" layoutY="280.0" mnemonicParsing="false" onAction="#viewMatchScores" prefHeight="25.0" prefWidth="177.0" text="View Match Scores" />
                            </children>
                         </AnchorPane>
-                        <TextArea fx:id="fixturesAndResultsTextField" layoutX="235.0" layoutY="53.0" prefHeight="354.0" prefWidth="407.0">
+                        <TextArea fx:id="viewerPageTextField" layoutX="235.0" layoutY="53.0" prefHeight="354.0" prefWidth="407.0">
                            <padding>
                               <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                            </padding>
